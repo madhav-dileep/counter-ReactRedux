@@ -1,0 +1,25 @@
+                    Redux - State Management Tool
+
+1. A JS library for predictable and maintainable global state management.
+
+2. Redux consist of 2 packages:
+    - React Redux :
+    - React toolKit
+
+3. Important API used in redux:
+    - configurationStore(): used to create store for redux
+    - steps :
+        . create a folder in src
+        . inside the folder create a JS file
+    - to provide store to react app use "Provider" component of react-redux library. Provider component has 'store' attribute using it we can provide our store to react app. InOrder to do that, make Provider component as the root component of out react app. IN main.js file 
+    - createReducer() : used to create Reducers where we store updated states
+    - createAction() : used to create action where we can define the logic to update the state, output of action automatically return to its reducer.
+    - createSlice() : used to combine action and reducer in a single file.
+        - steps :
+            . create a JS file defining Slice.
+            
+4. Hooks Used in component for managing state using redux 
+    - useSelector(state=>state.reducer_name) : used to select state from store in a component 
+    - useDispatch() : used to execute an action from a component . Hook will return a function that is capable of dispatching an action as its argument when we call the function.
+        . action without argument : dispatch-function(action-name())
+        . action with argument : dispatch-fuction(action-name(arg1...)), to access argument of action in slice reduce function it uses its second argument which is an object with 2 keys, payload and type, payload will give the argument from action dispatch by the component. 
